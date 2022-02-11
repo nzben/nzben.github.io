@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box {
+	@apply
+		bg-gray-200
+		text-gray-800
+    col-span-3
+		p-2
+		rounded-r;
+}
+
+.label {
+	@apply
+		p-2
+    border
+    border-gray-200
+    rounded-l
+}

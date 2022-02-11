@@ -6,76 +6,32 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Current NZ Status</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: large;
-            color: white;
-            background-color: black;
-        }
-        
-        h2 {
-            text-align: center;
-            color: black;
-            background-color: cornflowerblue;
-            border-radius: 5px 5px 0 0;
-            margin: 0 0 10px 0;
-            padding: 5px;
-        }
-        
-        #container {
-            min-width: 300px;
-            max-width: 600px;
-            margin: 10px auto 0 auto;
-            border: 2px solid cornflowerblue;
-            border-radius: 8px;
-            text-align: center;
-            flex: auto;
-        }
-        
-        table {
-            margin: auto;
-        }
-        
-        td:first-child {
-            width: 150px;
-            text-align: left;
-            font-size: larger;
-            font-weight: bold;
-        }
-        
-        td:nth-child(2) {
-            font-size: xx-large;
-        }
-    </style>
+    <link href='output.css' rel='stylesheet'>
 </head>
 
-<body>
+<body class="bg-white flex content-center">
 
-    <div id="container">
-        <h2>New Zealand Status</h2>
-        <table>
-            <tr>
-                <td>Light:</td>
-                <td>🔴</td>
-            </tr>
-            <tr>
-                <td>Phase:</td>
-                <td>1️⃣</td>
-            </tr>
-            <tr>
-                <td>Step:</td>
-                <td>0️⃣</td>
-            </tr>
-            <tr>
-                <td>TP Stocks:</td>
-                <td>📈</td>
-            </tr>
-            <tr>
-                <td>DEFCON:</td>
-                <td>4️⃣</td>
-            </tr>
-        </table>
+    <div class="max-w-sm rounded overflow-hidden shadow-lg m-8">
+        <img class="w-full" src="stripes.jpg" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl text-gray-500 mb-2">Current New Zealand Status</div>
+        </div>
+        <div class="px-6 text-gray-700 text-base grid overflow-hidden grid-cols-4 grid-rows-5 gap-y-2">
+            <div class="label">Light:</div>
+            <div class="box">🔴</div>
+            <div class="label">Phase</div>
+            <div class="box">One</div>
+            <div class="label">Step</div>
+            <div class="box">Zero</div>
+            <div class="label">Feels</div>
+            <div class="box">Muggy</div>
+        </div>
+        <div class="px-6 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#covid</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#nz</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#status</span>
+        </div>
+      </div>
 </body>
 
 </html>
