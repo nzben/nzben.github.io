@@ -7,6 +7,20 @@
     <title>Current NZ Status</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href='output.css' rel='stylesheet'>
+    <script>
+      // Hello yes, if you refresh the page the phase will update properly
+      // I don't want to wake up at midnight on the 15th to change the phase
+      // Also not installing an entire framework for this tiny bit of JavaScript.
+      window.onload = () => {
+        const phase = document.querySelector("#phase-value");
+        const phaseTwoDate = new Date("February 15, 2022 23:59:00");
+        if((new Date()).getTime() > phaseTwoDate.getTime()) {
+          phase.innerHTML = "Two";
+        } else {
+          phase.innerHTML = "One";
+        }
+      }
+    </script>
 </head>
 
 <body class="bg-white flex content-center">
@@ -22,15 +36,15 @@
               <p class="absolute right-2 bottom-1 text-xs"><a href="https://covid19.govt.nz/traffic-lights/">More info...</a></p>
             </div>
             <div class="label">Phase</div>
-            <div class="box relative"><strong>One</strong>
-              <p class="absolute right-2 bottom-1 text-xs"><a href="https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-response-planning/omicron-community-what-means-you">More info...</a></p>
+            <div class="box relative"><strong id="phase-value">One</strong>
+              <p class="absolute right-2 bottom-1 text-xs"><a href="https://covid19.govt.nz/news-and-data/latest-news/government-announces-three-phase-public-health-response-to-omicron/">More info...</a></p>
             </div>
             <div class="label">Step</div>
-            <div class="box relative"><strong>Zero</strong>
+            <div class="box relative"><strong id="step-value">Zero</strong>
               <p class="absolute right-2 bottom-1 text-xs"><a href="https://covid19.govt.nz/news-and-data/latest-news/new-zealand-border-to-reopen-in-stages-from-27-february">More info...</a></p>
             </div>
             <div class="label">Feels</div>
-            <div class="box relative"><strong>Muggy</strong>
+            <div class="box relative"><strong>Summery</strong>
               <p class="absolute right-2 bottom-1 text-xs"><a href="https://metservice.com">More info...</a></p>
             </div>
         </div>
