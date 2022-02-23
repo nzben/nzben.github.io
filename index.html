@@ -13,12 +13,12 @@
       // Also not installing an entire framework for this tiny bit of JavaScript.
       window.onload = () => {
         const phaseElement = document.querySelector("#phase-value");
-        const phaseTwoDate = new Date("February 15, 2022 23:59:00");
+        const phaseThreeDate = new Date("February 24, 2022 23:59:00");
         const now = (new Date()).getTime();
-        if(now > phaseTwoDate.getTime()) {
-          phaseElement.innerHTML = "Three-ish";
+        if(now > phaseThreeDate.getTime()) {
+          phaseElement.innerHTML = "Three";
         } else {
-          phaseElement.innerHTML = "One";
+          phaseElement.innerHTML = "Three-ish";
         }
 
         // tempting fate, but let's also pre-load the border re-opening step dates
