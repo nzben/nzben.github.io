@@ -25,14 +25,14 @@
         // we can always change these if they get delayed 🤷🏼‍♂️
         const stepElement = document.querySelector("#step-value");
         const stepOneDate = new Date("February 27, 2022 23:59:00");
-        const stepTwoDate = new Date("March 13, 2022 23:59:00");
+        const stepTwoDate = new Date("March 4, 2022 23:59:00");
         const stepThreeDate = new Date("April 12, 2022 23:59:00");
         if(now > stepThreeDate.getTime()) {
           stepElement.innerHTML = "Three";
         } else if (now > stepTwoDate.getTime()) {
           stepElement.innerHTML = "Two";
         } else if (now > stepOneDate.getTime()) {
-          stepElement.innerHTML = "One";
+          stepElement.innerHTML = "¯\_(ツ)_/¯";
         } else {
           stepElement.innerHTML = "Zero";
         }
